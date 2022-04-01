@@ -1,0 +1,55 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="_46.MasterPages.Site" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+
+</head>
+<body>
+    <form id="form1" runat="server">
+
+        <table style="font-family: Arial">
+            <tr>
+                <td colspan="2" style="width: 800px; height: 80px; text-align: center; background-color: #BDBDBD;">
+                    <h3>WebSite Header</h3>
+
+                    <asp:Panel ID="panelSearch" runat="server">
+                        <b>Search: </b>
+                        <asp:TextBox ID="txtSearch" runat="server"></asp:TextBox>
+                        <asp:Button ID="btnSearch" runat="server" Text="Button" OnClick="btnSearch_Click" />
+                    </asp:Panel>
+                </td>
+            </tr>
+
+            <tr>
+                <td style="height: 500px; background-color: #D8D8D8; width: 150px">
+                    <h3>Menu</h3>
+                    <br />
+                    <asp:TextBox ID="txtOnMasterPage" runat="server"></asp:TextBox>
+                </td>
+
+                <td style="height: 500px; background-color: #E6E6E6; width: 650px">
+
+                    <asp:ContentPlaceHolder ID="MainContentPlaceHolder" runat="server">
+
+                        <h2>This section changes on a page by page basis.  </h2>
+
+                    </asp:ContentPlaceHolder>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2" style="background-color: #BDBDBD; text-align: center">
+                    <b>Website Footer</b>
+                </td>
+            </tr>
+
+        </table>
+
+    </form>
+
+</body>
+</html>
